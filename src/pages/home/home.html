@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item ion-item *ngFor="let item of Moments">
+    <ion-card>
+      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />
+      <ion-card-content>
+        <ion-card-title>
+          {{item.tittle}}
+        </ion-card-title>
+        <p>
+          {{item.content}}
+        </p>
+      </ion-card-content>
+      <ion-item>
+        <button ion-button small>
+          <ion-icon item-left name="thumbs-up"(click)="itemLike($event,item)"></ion-icon>
+          <div>696</div>
+        </button>
+        <button ion-button small>
+        <ion-icon item-left name="text" (click)="itemLike($event,item)"></ion-icon>
+        <div>555</div>
+        </button>
+      </ion-item>
+    </ion-card>
+  </ion-item>
+</ion-content>
