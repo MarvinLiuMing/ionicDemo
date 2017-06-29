@@ -19,7 +19,7 @@ export class TabsPage {
 
   constructor(public navCtrl: NavController) {
   	console.log("constructor");
-    this.myindex="2";
+    this.myindex="0";
   }
 
   ionViewDidEnter (){

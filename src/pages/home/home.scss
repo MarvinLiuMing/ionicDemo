@@ -1,3 +1,52 @@
 page-home {
 
 }
+
+ion-card img{
+}
+
+#ImaAva{
+    width: 10px;
+    height: fit-content;
+}
+
+.label.label-md{
+    display:  -webkit-flex;
+    display:flex;
+}
+
+ion-item h2{
+    margin-left: 200px
+}
+#username{
+    width: 20px;
+    -webkit-flex:3;
+    flex: 3;
+}
+#p{
+    flex: 2;
+}
+
+ion-card{
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    border-color: #000000;
+}
+label label-md{
+    width: 100%;
+    height: 100%;
+}
+ion-app.md [padding],
+ion-app.md [padding] .scroll-content {
+  padding: 0px;
+}
+.item-md{
+    padding-left: 0px
+}
+.item-md.item-block .item-inner {
+  padding-right: 0px;
+}
+.label-md {
+    margin: 13px 0px 13px 0;
+}

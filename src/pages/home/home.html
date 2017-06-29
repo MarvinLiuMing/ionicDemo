@@ -7,25 +7,39 @@
 <ion-content padding>
   <ion-item ion-item *ngFor="let item of Moments">
     <ion-card>
-      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />
-      <ion-card-content>
-        <ion-card-title>
-          {{item.tittle}}
-        </ion-card-title>
-        <p>
-          {{item.content}}
-        </p>
-      </ion-card-content>
-      <ion-item>
-        <button ion-button small>
-          <ion-icon item-left name="thumbs-up"(click)="itemLike($event,item)"></ion-icon>
-          <div>696</div>
-        </button>
-        <button ion-button small>
-        <ion-icon item-left name="text" (click)="itemLike($event,item)"></ion-icon>
-        <div>555</div>
-        </button>
+      <ion-item id="ItemAva">
+        <ion-avatar id="ImaAva">
+          <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />
+        </ion-avatar>
+        <h2 id="username">Marty McFly</h2>
       </ion-item>
+      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg">
+
+
+      <ion-card-content>
+        <p>{{item.content}}</p>
+      </ion-card-content>
+
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
     </ion-card>
   </ion-item>
 </ion-content>

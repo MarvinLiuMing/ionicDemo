@@ -11,7 +11,8 @@ import { ContactPage } from '../contact/contact';
 export class HomePage {
   private Moments = [];
   constructor(public navCtrl: NavController) {
-    this.Moments = [{ "MomentsID": 1, "tittle": "Nine Inch Nails Live", "content": "The most popular industrial group ever, and largely responsible for bringing the music to a mass audience." },
+    this.Moments = [
+    { "MomentsID": 1, "tittle": "Nine Inch Nails Live", "content": "The most popular industrial group ever, and largely" },
     { "MomentsID": 2, "tittle": "No2", "content": "22222", },
     { "MomentsID": 3, "tittle": "No3", "content": "22222", },
     { "MomentsID": 2, "tittle": "No2", "content": "22222", },

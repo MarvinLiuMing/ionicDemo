@@ -55662,7 +55662,7 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-list inset>\n    <ion-item ion-item *ngFor="let item of contacts" (click)="itemSelected($event,item)" >\n      <ion-avatar item-left>\n        <img src="../image/avatar/avatar{{item.contactID}}.jpg">\n      </ion-avatar>\n      <h2>{{item.contactName}}</h2>\n      <p>{{item.contactText}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\pages\about\about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list inset>\n\n    <ion-item ion-item *ngFor="let item of contacts" (click)="itemSelected($event,item)" >\n\n      <ion-avatar item-left>\n\n        <img src="../image/avatar/avatar{{item.contactID}}.jpg">\n\n      </ion-avatar>\n\n      <h2>{{item.contactName}}</h2>\n\n      <p>{{item.contactText}}</p>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\about\about.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* AlertController */]])
 ], AboutPage);
@@ -55699,7 +55699,7 @@ var personalPage = (function () {
 }());
 personalPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-personalPage',template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\pages\about\personalPage.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>Personal</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    {{item.contactID}}\n\n</ion-content>'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\pages\about\personalPage.html"*/
+        selector: 'page-personalPage',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\about\personalPage.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>Personal</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    {{item.contactID}}\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\about\personalPage.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */]])
 ], personalPage);
@@ -55802,7 +55802,7 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\pages\contact\contact.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Contact\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n    <ion-item>\n      <ion-label color="primary">Username</ion-label>\n      <ion-input placeholder="Text Input" [(ngModel)]=\'username\'></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label color="primary" stacked>Password</ion-label>\n      <ion-input type="password" placeholder="Password Input"></ion-input>\n    </ion-item>\n    <button ion-button full (click)="logEvent($event)" >Full Button</button>\n    <button ion-button color="light" (click)="presentContactModal($event)">Light</button>\n  </ion-list>\n\n  <ion-item>\n    <ion-img width="80" height="80" src={{imgPath}} (click)="changeImage($event)"></ion-img>\n  </ion-item>\n</ion-content>'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\pages\contact\contact.html"*/,
+        selector: 'page-contact',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-label color="primary">Username</ion-label>\n\n      <ion-input placeholder="Text Input" [(ngModel)]=\'username\'></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label color="primary" stacked>Password</ion-label>\n\n      <ion-input type="password" placeholder="Password Input"></ion-input>\n\n    </ion-item>\n\n    <button ion-button full (click)="logEvent($event)" >Full Button</button>\n\n    <button ion-button color="light" (click)="presentContactModal($event)">Light</button>\n\n  </ion-list>\n\n\n\n  <ion-item>\n\n    <ion-img width="80" height="80" src={{imgPath}} (click)="changeImage($event)"></ion-img>\n\n  </ion-item>\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\contact\contact.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__["a" /* ImagePicker */]]
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
@@ -55841,7 +55841,7 @@ var signup = (function () {
 }());
 signup = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-signup',template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\pages\contact\signup.html"*/'<ion-header no-border>\n\n    <ion-toolbar>\n\n        <ion-title>Header</ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button (click)="dismissCurr($event)">cancel</button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    !sign up!\n\n</ion-content>'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\pages\contact\signup.html"*/
+        selector: 'page-signup',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\contact\signup.html"*/'<ion-header no-border>\n\n    <ion-toolbar>\n\n        <ion-title>Header</ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button (click)="dismissCurr($event)">cancel</button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    !sign up!\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\contact\signup.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */]])
 ], signup);
@@ -55871,7 +55871,8 @@ var HomePage = (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
         this.Moments = [];
-        this.Moments = [{ "MomentsID": 1, "tittle": "Nine Inch Nails Live", "content": "The most popular industrial group ever, and largely responsible for bringing the music to a mass audience." },
+        this.Moments = [
+            { "MomentsID": 1, "tittle": "Nine Inch Nails Live", "content": "The most popular industrial group ever, and largely" },
             { "MomentsID": 2, "tittle": "No2", "content": "22222", },
             { "MomentsID": 3, "tittle": "No3", "content": "22222", },
             { "MomentsID": 2, "tittle": "No2", "content": "22222", },
@@ -55884,7 +55885,8 @@ var HomePage = (function () {
             { "MomentsID": 2, "tittle": "No2", "content": "22222", },
             { "MomentsID": 2, "tittle": "No2", "content": "22222", },
             { "MomentsID": 2, "tittle": "No2", "content": "22222", },
-            { "MomentsID": 2, "tittle": "No2", "content": "22222", },];
+            { "MomentsID": 2, "tittle": "No2", "content": "22222", },
+        ];
     }
     HomePage.prototype.ionViewDidEnter = function () {
     };
@@ -55894,7 +55896,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <ion-item ion-item *ngFor="let item of Moments">\n    <ion-card>\n      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />\n      <ion-card-content>\n        <ion-card-title>\n          {{item.tittle}}\n        </ion-card-title>\n        <p>\n          {{item.content}}\n        </p>\n      </ion-card-content>\n      <ion-item>\n        <button ion-button small>\n          <ion-icon item-left name="thumbs-up"(click)="itemLike($event,item)"></ion-icon>\n          <div>696</div>\n        </button>\n        <button ion-button small>\n        <ion-icon item-left name="text" (click)="itemLike($event,item)"></ion-icon>\n        <div>555</div>\n        </button>\n      </ion-item>\n    </ion-card>\n  </ion-item>\n</ion-content>'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-item ion-item *ngFor="let item of Moments">\n\n    <ion-card>\n\n      <ion-item id="ItemAva">\n\n        <ion-avatar id="ImaAva">\n\n          <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />\n\n        </ion-avatar>\n\n        <h2 id="username">Marty McFly</h2>\n\n      </ion-item>\n\n      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg">\n\n\n\n\n\n      <ion-card-content>\n\n        <p>{{item.content}}</p>\n\n      </ion-card-content>\n\n\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n        <ion-icon name="thumbs-up"></ion-icon>\n\n        <div>12 Likes</div>\n\n      </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n        <ion-icon name="text"></ion-icon>\n\n        <div>4 Comments</div>\n\n      </button>\n\n        </ion-col>\n\n        <ion-col center text-center>\n\n          <ion-note>\n\n            11h ago\n\n          </ion-note>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n    </ion-card>\n\n  </ion-item>\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\home\home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
 ], HomePage);
@@ -55933,14 +55935,14 @@ var TabsPage = (function () {
         this.tab2Root = __WEBPACK_IMPORTED_MODULE_1__about_about__["a" /* AboutPage */];
         this.tab3Root = __WEBPACK_IMPORTED_MODULE_2__contact_contact__["a" /* ContactPage */];
         console.log("constructor");
-        this.myindex = "2";
+        this.myindex = "0";
     }
     TabsPage.prototype.ionViewDidEnter = function () {
     };
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\pages\tabs\tabs.html"*/'<ion-tabs id="mainTabs" selectedIndex={{myindex}}>\n  <ion-tab [root]="tab1Root" tabTitle="Moments" tabBadge="3" tabIcon="aperture"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="contacts" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Personal" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\pages\tabs\tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\tabs\tabs.html"*/'<ion-tabs id="mainTabs" selectedIndex={{myindex}}>\n\n  <ion-tab [root]="tab1Root" tabTitle="Moments" tabBadge="3" tabIcon="aperture"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="contacts" tabIcon="contacts"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Personal" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\tabs\tabs.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavController */]])
 ], TabsPage);
@@ -76849,7 +76851,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"E:\ionicWorkspace\ionicdemo\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"E:\ionicWorkspace\ionicdemo\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\GitHub\ionicdemo\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
