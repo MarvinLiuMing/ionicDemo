@@ -24683,13 +24683,6 @@ ion-item h2 {
   margin-left: 200px;
 }
 
-#username {
-  width: 20px;
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-}
-
 #p {
   -webkit-flex: 2;
   -ms-flex: 2;
