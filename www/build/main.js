@@ -29542,11 +29542,11 @@ function UIEventManager_tsickle_Closure_declarations() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_114__navigation_ionic_page__ = __webpack_require__(232);
 /* unused harmony reexport IonicPage */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_115__navigation_nav_controller__ = __webpack_require__(18);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_115__navigation_nav_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_115__navigation_nav_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_116__navigation_nav_controller_base__ = __webpack_require__(45);
 /* unused harmony reexport NavControllerBase */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__ = __webpack_require__(15);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_117__navigation_nav_params__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_118__navigation_nav_util__ = __webpack_require__(22);
 /* unused harmony reexport DeepLinkMetadata */
 /* unused harmony reexport DeepLinkMetadataFactory */
@@ -29558,7 +29558,7 @@ function UIEventManager_tsickle_Closure_declarations() {
 /* unused harmony reexport UrlSerializer */
 /* unused harmony reexport DeepLinkConfigToken */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__ = __webpack_require__(5);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_121__navigation_view_controller__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_122__gestures_pan_gesture__ = __webpack_require__(44);
 /* unused harmony reexport PanGesture */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_123__gestures_gesture__ = __webpack_require__(228);
@@ -55662,9 +55662,9 @@ var AboutPage = (function () {
 }());
 AboutPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-about',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list inset>\n\n    <ion-item ion-item *ngFor="let item of contacts" (click)="itemSelected($event,item)" >\n\n      <ion-avatar item-left>\n\n        <img src="../image/avatar/avatar{{item.contactID}}.jpg">\n\n      </ion-avatar>\n\n      <h2>{{item.contactName}}</h2>\n\n      <p>{{item.contactText}}</p>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\about\about.html"*/
+        selector: 'page-about',template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list inset>\n\n    <ion-item ion-item *ngFor="let item of contacts" (click)="itemSelected($event,item)" >\n\n      <ion-avatar item-left>\n\n        <img src="../image/avatar/avatar{{item.contactID}}.jpg">\n\n      </ion-avatar>\n\n      <h2>{{item.contactName}}</h2>\n\n      <p>{{item.contactText}}</p>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\about\about.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* AlertController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* AlertController */]])
 ], AboutPage);
 
 //# sourceMappingURL=about.js.map
@@ -55691,7 +55691,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var personalPage = (function () {
     function personalPage(params) {
         this.params = params;
-        this.item = new __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */]();
+        this.item = new __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]();
         console.log(params);
         this.item = params.data.item;
     }
@@ -55699,9 +55699,9 @@ var personalPage = (function () {
 }());
 personalPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-personalPage',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\about\personalPage.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>Personal</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    {{item.contactID}}\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\about\personalPage.html"*/
+        selector: 'page-personalPage',template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\about\personalPage.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>Personal</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    {{item.contactID}}\n\n</ion-content>'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\about\personalPage.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]])
 ], personalPage);
 
 //# sourceMappingURL=personalPage.js.map
@@ -55802,10 +55802,10 @@ var ContactPage = (function () {
 }());
 ContactPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-contact',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-label color="primary">Username</ion-label>\n\n      <ion-input placeholder="Text Input" [(ngModel)]=\'username\'></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label color="primary" stacked>Password</ion-label>\n\n      <ion-input type="password" placeholder="Password Input"></ion-input>\n\n    </ion-item>\n\n    <button ion-button full (click)="logEvent($event)" >Full Button</button>\n\n    <button ion-button color="light" (click)="presentContactModal($event)">Light</button>\n\n  </ion-list>\n\n\n\n  <ion-item>\n\n    <ion-img width="80" height="80" src={{imgPath}} (click)="changeImage($event)"></ion-img>\n\n  </ion-item>\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\contact\contact.html"*/,
+        selector: 'page-contact',template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\contact\contact.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      Contact\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-list-header>Follow us on Twitter</ion-list-header>\n\n    <ion-item>\n\n      <ion-label color="primary">Username</ion-label>\n\n      <ion-input placeholder="Text Input" [(ngModel)]=\'username\'></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label color="primary" stacked>Password</ion-label>\n\n      <ion-input type="password" placeholder="Password Input"></ion-input>\n\n    </ion-item>\n\n    <button ion-button full (click)="logEvent($event)" >Full Button</button>\n\n    <button ion-button color="light" (click)="presentContactModal($event)">Light</button>\n\n  </ion-list>\n\n\n\n  <ion-item>\n\n    <ion-img width="80" height="80" src={{imgPath}} (click)="changeImage($event)"></ion-img>\n\n  </ion-item>\n\n</ion-content>'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\contact\contact.html"*/,
         providers: [__WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__["a" /* ImagePicker */]]
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* LoadingController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_image_picker__["a" /* ImagePicker */], __WEBPACK_IMPORTED_MODULE_4__angular_http__["b" /* Http */]])
 ], ContactPage);
 
@@ -55841,9 +55841,9 @@ var signup = (function () {
 }());
 signup = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-signup',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\contact\signup.html"*/'<ion-header no-border>\n\n    <ion-toolbar>\n\n        <ion-title>Header</ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button (click)="dismissCurr($event)">cancel</button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    !sign up!\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\contact\signup.html"*/
+        selector: 'page-signup',template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\contact\signup.html"*/'<ion-header no-border>\n\n    <ion-toolbar>\n\n        <ion-title>Header</ion-title>\n\n        <ion-buttons end>\n\n            <button ion-button (click)="dismissCurr($event)">cancel</button>\n\n        </ion-buttons>\n\n    </ion-toolbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    !sign up!\n\n</ion-content>'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\contact\signup.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* ViewController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ViewController */]])
 ], signup);
 
 //# sourceMappingURL=signup.js.map
@@ -55855,6 +55855,7 @@ signup = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_addNewInfo__ = __webpack_require__(268);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55865,6 +55866,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 var HomePage = (function () {
@@ -55892,13 +55894,16 @@ var HomePage = (function () {
     };
     HomePage.prototype.itemLike = function () {
     };
+    HomePage.prototype.addNewInf = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__home_addNewInfo__["a" /* addNewInfo */]);
+    };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-label>Gaming</ion-label>\n\n      <ion-select [(ngModel)]="gaming">\n\n        <ion-option value="nes">NES</ion-option>\n\n        <ion-option value="n64">Nintendo64</ion-option>\n\n        <ion-option value="ps">PlayStation</ion-option>\n\n        <ion-option value="genesis">Sega Genesis</ion-option>\n\n        <ion-option value="saturn">Sega Saturn</ion-option>\n\n        <ion-option value="snes">SNES</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n  <ion-item ion-item *ngFor="let item of Moments">\n\n    <ion-card>\n\n      <ion-item id="ItemAva">\n\n        <ion-avatar id="ImaAva">\n\n          <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />\n\n        </ion-avatar>\n\n        <h2 id="username">Marty McFly</h2>\n\n      </ion-item>\n\n      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg">\n\n\n\n\n\n      <ion-card-content>\n\n        <p>{{item.content}}</p>\n\n      </ion-card-content>\n\n\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n        <ion-icon name="thumbs-up"></ion-icon>\n\n        <div>12 Likes</div>\n\n      </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n        <ion-icon name="text"></ion-icon>\n\n        <div>4 Comments</div>\n\n      </button>\n\n        </ion-col>\n\n        <ion-col center text-center>\n\n          <ion-note>\n\n            11h ago\n\n          </ion-note>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n    </ion-card>\n\n  </ion-item>\n\n</ion-content>'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\home\home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Home</ion-title>\n\n    <button ion-button color="light" (click)="addNewInf($event)">发布新消息</button>\n\n\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-select [(ngModel)]="employee" placeholder="省">\n\n        <ion-option *ngFor="let item of Moments">{{item.MomentsID}}</ion-option>\n\n      </ion-select>\n\n      <ion-select [(ngModel)]="employee" placeholder="市">\n\n      </ion-select>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n  <ion-item ion-item *ngFor="let item of Moments">\n\n    <ion-card>\n\n      <ion-item id="ItemAva">\n\n        <ion-avatar id="ImaAva">\n\n          <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />\n\n        </ion-avatar>\n\n        <h2 id="username">Marty McFly</h2>\n\n      </ion-item>\n\n      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg">\n\n\n\n\n\n      <ion-card-content>\n\n        <p>{{item.content}}</p>\n\n      </ion-card-content>\n\n\n\n      <ion-row>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n        <ion-icon name="thumbs-up"></ion-icon>\n\n        <div>12 Likes</div>\n\n      </button>\n\n        </ion-col>\n\n        <ion-col>\n\n          <button ion-button icon-left clear small>\n\n        <ion-icon name="text"></ion-icon>\n\n        <div>4 Comments</div>\n\n      </button>\n\n        </ion-col>\n\n        <ion-col center text-center>\n\n          <ion-note>\n\n            11h ago\n\n          </ion-note>\n\n        </ion-col>\n\n      </ion-row>\n\n\n\n    </ion-card>\n\n  </ion-item>\n\n</ion-content>'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\home\home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], HomePage);
 
 //# sourceMappingURL=home.js.map
@@ -55942,9 +55947,9 @@ var TabsPage = (function () {
     return TabsPage;
 }());
 TabsPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\pages\tabs\tabs.html"*/'<ion-tabs id="mainTabs" selectedIndex={{myindex}}>\n\n  <ion-tab [root]="tab1Root" tabTitle="Moments" tabBadge="3" tabIcon="aperture"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="contacts" tabIcon="contacts"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Personal" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"F:\GitHub\ionicdemo\src\pages\tabs\tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\tabs\tabs.html"*/'<ion-tabs id="mainTabs" selectedIndex={{myindex}}>\n\n  <ion-tab [root]="tab1Root" tabTitle="Moments" tabBadge="3" tabIcon="aperture"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="contacts" tabIcon="contacts"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Personal" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\tabs\tabs.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["d" /* NavController */]])
 ], TabsPage);
 
 //# sourceMappingURL=tabs.js.map
@@ -76563,9 +76568,10 @@ webpackEmptyContext.id = 198;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_contact_signup__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_http__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_home_addNewInfo__ = __webpack_require__(268);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__angular_http__ = __webpack_require__(106);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -76573,6 +76579,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -76600,11 +76607,12 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_9__pages_contact_signup__["a" /* signup */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_about_personalPage__["a" /* personalPage */]
+            __WEBPACK_IMPORTED_MODULE_5__pages_about_personalPage__["a" /* personalPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_home_addNewInfo__["a" /* addNewInfo */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_12__angular_http__["a" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_13__angular_http__["a" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */])
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
@@ -76615,11 +76623,12 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_7__pages_home_home__["a" /* HomePage */],
             __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__["a" /* TabsPage */],
             __WEBPACK_IMPORTED_MODULE_9__pages_contact_signup__["a" /* signup */],
-            __WEBPACK_IMPORTED_MODULE_5__pages_about_personalPage__["a" /* personalPage */]
+            __WEBPACK_IMPORTED_MODULE_5__pages_about_personalPage__["a" /* personalPage */],
+            __WEBPACK_IMPORTED_MODULE_10__pages_home_addNewInfo__["a" /* addNewInfo */]
         ],
         providers: [
-            __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_11__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_12__ionic_native_splash_screen__["a" /* SplashScreen */],
             { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicErrorHandler */] }
         ]
     })
@@ -76851,7 +76860,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"F:\GitHub\ionicdemo\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\GitHub\ionicdemo\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"E:\GitHub\ionicdemo\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -113806,6 +113815,62 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 267 */,
+/* 268 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__ = __webpack_require__(206);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return addNewInfo; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var addNewInfo = (function () {
+    function addNewInfo(navCtrl, imgPicker) {
+        this.navCtrl = navCtrl;
+        this.imgPicker = imgPicker;
+        this.options = {
+            height: 1000,
+            width: 30,
+        };
+        this.imgPath = "";
+    }
+    addNewInfo.prototype.ADDImage = function () {
+        var _this = this;
+        this.imgPicker.getPictures(this.options).then(function (results) {
+            for (var i = 0; i < results.length; i++) {
+                _this.imgPath = results[i];
+            }
+        }, function (err) { });
+    };
+    addNewInfo.prototype.submitNewInfo = function () {
+        this.navCtrl.pop();
+    };
+    return addNewInfo;
+}());
+addNewInfo = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'page-addNewInfo',template:/*ion-inline-start:"E:\GitHub\ionicdemo\src\pages\home\addNewInfo.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>AddNewInfo</ion-title>\n\n        <button ion-button color="light" (click)="submitNewInfo($event)">提交</button>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-item>\n\n        <ion-input placeholder="Clear Input" clearInput></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n        <ion-textarea placeholder="Enter a description" id="ADDtextArea"></ion-textarea>\n\n    </ion-item>\n\n    <ion-item>\n\n        <ion-select [(ngModel)]="employee" placeholder="省">\n\n            <ion-option *ngFor="let item of Moments">{{item.MomentsID}}</ion-option>\n\n        </ion-select>\n\n        <ion-select [(ngModel)]="employee" placeholder="市">\n\n        </ion-select>\n\n    </ion-item>\n\n    <ion-img src={{imgPath}} (click)="ADDImage($event)">\n\n        tianjia\n\n    </ion-img>\n\n</ion-content>'/*ion-inline-end:"E:\GitHub\ionicdemo\src\pages\home\addNewInfo.html"*/,
+        providers: [__WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__["a" /* ImagePicker */]]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__["a" /* ImagePicker */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_image_picker__["a" /* ImagePicker */]) === "function" && _b || Object])
+], addNewInfo);
+
+var _a, _b;
+//# sourceMappingURL=addNewInfo.js.map
 
 /***/ })
 /******/ ]);

@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { signup } from '../pages/contact/signup';
+import { addNewInfo } from '../pages/home/addNewInfo'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,7 +24,8 @@ import {HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     signup,
-    personalPage
+    personalPage,
+    addNewInfo
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import {HttpModule } from '@angular/http';
     HomePage,
     TabsPage,
     signup,
-    personalPage
+    personalPage,
+    addNewInfo
   ],
   providers: [
     StatusBar,

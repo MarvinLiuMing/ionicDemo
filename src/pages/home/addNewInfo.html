@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>AddNewInfo</ion-title>
+        <button ion-button color="light" (click)="submitNewInfo($event)">提交</button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-input placeholder="Clear Input" clearInput></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-textarea placeholder="Enter a description" id="ADDtextArea"></ion-textarea>
+    </ion-item>
+    <ion-item>
+        <ion-select [(ngModel)]="employee" placeholder="省">
+            <ion-option *ngFor="let item of Moments">{{item.MomentsID}}</ion-option>
+        </ion-select>
+        <ion-select [(ngModel)]="employee" placeholder="市">
+        </ion-select>
+    </ion-item>
+    <ion-img src={{imgPath}} (click)="ADDImage($event)">
+        tianjia
+    </ion-img>
+</ion-content>

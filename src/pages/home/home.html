@@ -1,23 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <button ion-button color="light" (click)="addNewInf($event)">发布新消息</button>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
   <ion-list>
     <ion-item>
-      <ion-label>Gaming</ion-label>
-      <ion-select [(ngModel)]="gaming">
-        <ion-option value="nes">NES</ion-option>
-        <ion-option value="n64">Nintendo64</ion-option>
-        <ion-option value="ps">PlayStation</ion-option>
-        <ion-option value="genesis">Sega Genesis</ion-option>
-        <ion-option value="saturn">Sega Saturn</ion-option>
-        <ion-option value="snes">SNES</ion-option>
+      <ion-select [(ngModel)]="employee" placeholder="省">
+        <ion-option *ngFor="let item of Moments">{{item.MomentsID}}</ion-option>
+      </ion-select>
+      <ion-select [(ngModel)]="employee" placeholder="市">
       </ion-select>
     </ion-item>
   </ion-list>
+
   <ion-item ion-item *ngFor="let item of Moments">
     <ion-card>
       <ion-item id="ItemAva">
