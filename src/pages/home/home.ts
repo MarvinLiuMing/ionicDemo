@@ -3,9 +3,10 @@ import { NavController, NavParams } from 'ionic-angular';
 import { IonicApp } from 'ionic-angular';
 
 import { addNewInfo } from '../home/addNewInfo'
+import { showInfo } from '../home/showInfo'
 
 @Component({
-  selector: 'page-home',
+  selector: 'page-home-css',
   templateUrl: 'home.html'
 })
 export class HomePage {
@@ -34,9 +35,11 @@ export class HomePage {
   itemLike() {
 
   }
-  addNewInf() {
+  GOaddNewInf() {
     this.navCtrl.push(addNewInfo);
   }
-
+  GOshowInfo(event,contact){
+    this.navCtrl.push(showInfo,{item:contact});
+  }
 }
 

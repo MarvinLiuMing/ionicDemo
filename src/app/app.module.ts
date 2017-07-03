@@ -10,11 +10,12 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { signup } from '../pages/contact/signup';
 import { addNewInfo } from '../pages/home/addNewInfo'
+import { showInfo } from '../pages/home/showInfo'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import {HttpModule } from '@angular/http';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {HttpModule } from '@angular/http';
     TabsPage,
     signup,
     personalPage,
-    addNewInfo
+    addNewInfo,
+    showInfo
   ],
   imports: [
     BrowserModule,
@@ -41,12 +43,13 @@ import {HttpModule } from '@angular/http';
     TabsPage,
     signup,
     personalPage,
-    addNewInfo
+    addNewInfo,
+    showInfo
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

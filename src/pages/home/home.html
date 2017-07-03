@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
-    <button ion-button color="light" (click)="addNewInf($event)">发布新消息</button>
+    <button ion-button color="light" (click)="GOaddNewInf($event)">发布新消息</button>
 
   </ion-navbar>
 </ion-header>
@@ -26,10 +26,10 @@
         </ion-avatar>
         <h2 id="username">Marty McFly</h2>
       </ion-item>
-      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg">
+      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" (click)="GOshowInfo($event,item)">
 
 
-      <ion-card-content>
+      <ion-card-content (click)="GOshowInfo($event,item)">
         <p>{{item.content}}</p>
       </ion-card-content>
 
