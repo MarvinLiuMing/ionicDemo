@@ -1,0 +1,21 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-title>sigin in</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="dismissCurr($event)">cancel</button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+    <ion-item>
+      <ion-input placeholder="Username" [(ngModel)]='username'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password Input"[(ngModel)]='password'></ion-input>
+    </ion-item>
+    <button ion-button full (click)="logEvent($event)" >Full Button</button>
+  </ion-list>
+  <button ion-button color="light" style="float:right" (click)="GoSignUp($event)">sign up</button>
+</ion-content>

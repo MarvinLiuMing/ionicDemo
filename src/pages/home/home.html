@@ -2,7 +2,6 @@
   <ion-navbar>
     <ion-title>Home</ion-title>
     <button ion-button color="light" (click)="GOaddNewInf($event)">发布新消息</button>
-
   </ion-navbar>
 </ion-header>
 
@@ -20,12 +19,10 @@
 
   <ion-item ion-item *ngFor="let item of Moments">
     <ion-card>
-      <ion-item id="ItemAva">
         <ion-avatar id="ImaAva">
           <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />
         </ion-avatar>
         <h2 id="username">Marty McFly</h2>
-      </ion-item>
       <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" (click)="GOshowInfo($event,item)">
 
 

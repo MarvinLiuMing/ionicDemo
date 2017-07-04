@@ -31,4 +31,12 @@ ion-slides {
     border-left: 200px solid #000000;
     border-right: 200px solid #000000;
     text-align: center;
+    
+}
+
+label label-md, .card-ios {
+    height: fit-content;
+}
+ion-card{
+    height: fit-content;
 }

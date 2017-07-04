@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, LoadingController, ModalController } from 'ionic-angular';
-import { signup } from '../contact/signup';
+import { signin } from '../contact/signin';
 import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
 import { Http } from '@angular/http';
 
@@ -71,8 +71,8 @@ export class ContactPage {
     // console.log('event!' + this.username)
   }
 
-  presentContactModal() {
-    let contactModal = this.modalCtrl.create(signup);
+  GoSignin() {
+    let contactModal = this.modalCtrl.create(signin);
     contactModal.present();
   }
 

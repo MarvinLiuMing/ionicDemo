@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController,AlertController } from 'ionic-angular';
-import { personalPage } from '../about/personalPage'
+import { showInfo } from '../home/showInfo'
 
 @Component({
   selector: 'page-about',
@@ -25,7 +25,7 @@ export class AboutPage {
     { "contactID": 2, "contactName": "No2", "contactText": "22222", },];
   }
   itemSelected(event,contact){
-    this.navCtrl.push(personalPage,{item:contact});
+    this.navCtrl.push(showInfo,{item:contact});
   }
 
     showAlert(msg) {

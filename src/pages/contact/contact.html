@@ -7,21 +7,41 @@
 </ion-header>
 
 <ion-content>
+  <ion-card style="height:20%">
+    <ion-card-content>
+      <ion-avatar class="showInfomasterAva">
+        <img style="border:2px;border-radius:25px;" src="" />
+      </ion-avatar>
+      <h2 id="username">Marty McFly222</h2>
+
+      The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button color="light" style="float:right" (click)="GoSignin($event)">登陆注册</button>
+
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-label color="primary">Username</ion-label>
-      <ion-input placeholder="Text Input" [(ngModel)]='username'></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label color="primary" stacked>Password</ion-label>
-      <ion-input type="password" placeholder="Password Input"></ion-input>
-    </ion-item>
-    <button ion-button full (click)="logEvent($event)" >Full Button</button>
-    <button ion-button color="light" (click)="presentContactModal($event)">Light</button>
+    <button ion-item (click)="GoSignin(item)">
+    我的收藏
+  </button>
+    <button ion-item (click)="GoSignin(item)">
+    我的提问
+  </button>
+    <button ion-item (click)="GoSignin(item)">
+    历史记录
+  </button>
+    <button ion-item (click)="GoSignin(item)">
+    意见反馈
+  </button>
+    <button ion-item (click)="GoSignin(item)">
+    关于
+  </button>
+    <button ion-item (click)="GoSignin(item)">
+    注销
+  </button>
   </ion-list>
 
-  <ion-item>
+  <!--<ion-item>
     <ion-img width="80" height="80" src={{imgPath}} (click)="changeImage($event)"></ion-img>
-  </ion-item>
+  </ion-item>-->
 </ion-content>

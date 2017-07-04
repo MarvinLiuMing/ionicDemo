@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { signup } from '../pages/contact/signup';
+import { signin } from '../pages/contact/signin';
 import { addNewInfo } from '../pages/home/addNewInfo'
 import { showInfo } from '../pages/home/showInfo'
 
@@ -27,7 +28,8 @@ import { HttpModule } from '@angular/http';
     signup,
     personalPage,
     addNewInfo,
-    showInfo
+    showInfo,
+    signin
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { HttpModule } from '@angular/http';
     signup,
     personalPage,
     addNewInfo,
-    showInfo
+    showInfo,
+    signin
   ],
   providers: [
     StatusBar,

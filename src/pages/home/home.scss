@@ -8,13 +8,13 @@ ion-card img{
 #ImaAva{
     width: 10px;
     height: fit-content;
+    border:2px;
+    border-radius:25px;
+    float: left;
+    margin-bottom:3px;
 }
 
-.label.label-md,.label-ios{
-    display:  -webkit-flex;
-    display:flex;
-    margin:0 0 0 0;
-}
+
 .label-md,.label-ios {
     margin: 0px 0px 0px 0;
     width:100%;
@@ -75,3 +75,9 @@ ion-img{
     min-height: 80px;
 }
 
+.list-ios {
+    margin: 0px 0 0px 0;
+}
+.item-md, .item-ios {
+    padding-top: 10px;
+}
