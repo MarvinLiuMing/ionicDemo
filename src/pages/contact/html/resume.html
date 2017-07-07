@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Resume</ion-title>
+        <button ion-button color="light" (click)="submitResume($event)">提交</button>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-avatar style="float:right">
+                <ion-img src={{imgPath}} (click)="ADDImage($event)"> </ion-img>
+            </ion-avatar>
+            <h2 class="itemName">avatar</h2>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime displayFormat="YYYY/MM/DD" [(ngModel)]="myDate">
+            </ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>性别</ion-label>
+            <ion-select [(ngModel)]="gaming">
+                <ion-option value="male">男</ion-option>
+                <ion-option value="female">女</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+</ion-content>

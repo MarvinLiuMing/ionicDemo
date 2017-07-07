@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item ion-item *ngFor="let item of contacts" (click)="itemSelected($event,item)" >
+        <img src="../image/avatar/avatar{{item.contactID}}.jpg" style="float:left;width:30%;height:100%">
+      <h2>{{item.contactName}}</h2>
+      <p>{{item.contactText}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

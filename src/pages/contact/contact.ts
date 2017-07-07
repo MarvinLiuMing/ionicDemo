@@ -1,24 +1,43 @@
 import { Component } from '@angular/core';
 import { NavController, ToastController, LoadingController, ModalController } from 'ionic-angular';
-import { signin } from '../contact/signin';
 import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
 import { Http } from '@angular/http';
+import { NativeStorage } from '@ionic-native/native-storage';
+
+import { signin } from '../contact/signin';
+import { itemList } from '../contact/itemList';
+import { resume } from '../contact/resume';
 
 @Component({
   selector: 'page-contact',
-  templateUrl: 'contact.html',
-  providers: [ImagePicker]
+  templateUrl: 'html/contact.html',
+  providers: [ImagePicker, NativeStorage]
 })
 export class ContactPage {
 
   private user = {};
   private username: string;
   private imgPath: string;
+  private islogin: boolean;
+
+
   constructor(public navCtrl: NavController, private toastCtrl: ToastController, public loadingCtrl: LoadingController,
-    public modalCtrl: ModalController, public imgPicker: ImagePicker, public http: Http) {
+    public modalCtrl: ModalController, public imgPicker: ImagePicker, public http: Http, public nativeStorage: NativeStorage) {
     this.user = {};
     this.username = "";
     this.imgPath = "../image/avatar/avatar1.jpg";
+
+    this.nativeStorage.setItem('myitem', { property: 'value', anotherProperty: 'anotherValue' })
+      .then(
+      () => console.log('Stored item!'),
+      error => console.error('Error storing item', error)
+      );
+
+    this.nativeStorage.getItem('myitem')
+      .then(
+      data => console.log(data),
+      error => console.error(error)
+      );
   }
 
 
@@ -49,10 +68,6 @@ export class ContactPage {
   }
 
   logEvent() {
-    console.log("logEvent")
-    // this.http.post("http://192.168.1.4:3000/test", { 'Content-Type': 'application/x-www-form-urlencoded' })
-    //   .subscribe(data => { console.log("data") }, error => { alert("Error！！"); });
-
     this.http.get('http://192.168.1.4:3000/test').subscribe(Response => {
       console.log(Response)
       console.log(Response.text())
@@ -85,5 +100,39 @@ export class ContactPage {
         console.log('Image URI: ' + results[i]);
       }
     }, (err) => { });
+  }
+
+  signout() {
+    if (this.islogin) {
+      this.islogin = false;
+    } else {
+      this.islogin = true;
+    }
+    console.log(this.islogin);
+  }
+
+  GoFav() {
+    this.navCtrl.push(itemList);
+  }
+
+  GoResume() {
+    this.nativeStorage.getItem('myitem')
+      .then(
+      data => console.log(data),
+      error => console.error(error)
+      );
+    this.nativeStorage.setItem('myitem', { property: 'valu222e', anotherProperty: 'another3333Value' })
+      .then(
+      () => console.log('Stored item!'),
+      error => console.error('Error storing item', error)
+      );
+
+
+    this.nativeStorage.getItem('myitem')
+      .then(
+      data => console.log(data),
+      error => console.error(error)
+      );
+    //this.navCtrl.push(resume);
   }
 }
