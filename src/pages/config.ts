@@ -1,1 +1,1 @@
-export const ConfigURL = "http://loc";
+export const ConfigURL = "http://localhost:3000/";

@@ -26,7 +26,6 @@ export class ContactPage {
     this.user = {};
     this.username = "";
     this.imgPath = "../image/avatar/avatar1.jpg";
-
     this.nativeStorage.setItem('myitem', { property: 'value', anotherProperty: 'anotherValue' })
       .then(
       () => console.log('Stored item!'),
