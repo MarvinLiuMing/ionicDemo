@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController, ToastController, LoadingController, ModalController } from 'ionic-angular';
-import { signup } from '../contact/signup';
-import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
-import { Http, RequestOptionsArgs, Headers, Request, RequestOptions, RequestMethod } from '@angular/http';
+import { NavController, ViewController, ToastController, ModalController } from 'ionic-angular';
 import { Md5 } from "ts-md5/dist/md5";
-import { ConfigURL } from '../config'
+import { MyHttp } from '../config'
+import { NativeStorage } from '@ionic-native/native-storage';
 
+import { signup } from '../contact/signup';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-signin',
   templateUrl: 'html/signin.html',
-  providers: [ImagePicker]
+  providers: [NativeStorage, MyHttp]
 })
 export class signin {
 
@@ -23,78 +23,54 @@ export class signin {
   public myPlaintextPassword = 's0/\/\P4$$w0rD';
   public someOtherPlaintextPassword = 'not_bacon';
 
-  constructor(public ViewController: ViewController, public navCtrl: NavController, private toastCtrl: ToastController, public loadingCtrl: LoadingController,
-    public modalCtrl: ModalController, public imgPicker: ImagePicker, public http: Http) {
+  constructor(public ViewController: ViewController, public navCtrl: NavController, public toastCtrl: ToastController,
+    public nativeStorage: NativeStorage, public myHttp: MyHttp) {
     this.user = {};
     this.username = "";
     this.imgPath = "../image/avatar/avatar1.jpg";
-    console.log(Md5.hashStr("123456"));
+    console.log(Md5.hashStr("marvin"));
   }
   GoSignUp() {
     this.navCtrl.push(signup);
     this.dismissCurr();
-    // let contactModal = this.modalCtrl.create(signup);
-    // contactModal.present();
   }
   dismissCurr() {
     this.ViewController.dismiss();
   }
   signIn() {
-    // let body = JSON.stringify({
-    //   code: "mk200"
-    // });
-    // this.PostRequest("http://localhost:3000/signin", body)
-
-    let header = new Headers();
-    //header.append('Content-Type','multipart/form-data; boundary=----WebKitFormBoundaryElhv3o75fbzQsVTw')
-    header.append('Content-Type', 'application/json')
-    //header.append('Access-Control-Allow-Origin','http://localhost:8100')
-    //header.append('Access-Control-Allow-Headers','Content-Type')
-    //header.append('Content-Type','application/form-data;')
-    //header.append('Content-Type', 'application/x-www-form-urlencoded')
-
-    var options: RequestOptionsArgs = {
-      url: 'http://localhost:3000/signin',
-      method: "POST",
-      headers: header
-    };
-    console.log(header.toJSON())
     let body = JSON.stringify({
       username: this.username,
-      password: this.password
+      password: Md5.hashStr(this.password)
     });
-    //let body = "username=admin&password=admin";
-    this.http.post(ConfigURL + 'signin', body, options).subscribe(Response => {
-      var data = Response.json()
+    var _this = this;
+    this.myHttp.post('signin', body, function (data) {
       if (data.errorCode == "104") {
-        console.log("登录失败")
-      } else if (data.errorCode == "100") {
-        console.log("登录成功")
+        _this.presentToast("密码错误")
+      } else if (data.errorCode == "101") {
+        _this.presentToast("用户不存在")
       }
-    }, error => {
-      alert("Error！！" + error);
-    });
+      else if (data.errorCode == "100") {
+        _this.presentToast("登录成功");
+        _this.nativeStorage.setItem("userInfo", data.user)
+        _this.nativeStorage.setItem("toekn", data.token)
+        _this.dismissCurr();
+      }
+    }
+    )
   }
 
-  PostRequest(url, data) {
-    console.log(data)
-    let headers = new Headers({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST,OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Max-Age': '86400'
+  presentToast(msg: string) {
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: 2000,
+      position: 'bottom'
     });
-    console.log(headers.toJSON())
-    this.http.request(new Request({
-      method: RequestMethod.Post,
-      url: url,
-      headers: headers,
-      body: data
-    })).subscribe(res => {
-      //URL should have included '?password=123'
-      console.log('people', res.json());
-    });;
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
   }
 
 }

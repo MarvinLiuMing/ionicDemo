@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { showInfo } from '../home/showInfo'
-import { ConfigURL } from '../config'
 
 @Component({
   selector: 'page-contact',
@@ -10,7 +9,7 @@ import { ConfigURL } from '../config'
 export class itemList {
   private contacts = [];
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-    console.log("item list : "+ConfigURL);
+    console.log("item list : ");
 
 
     this.contacts = [{ "contactID": 1, "contactName": "No1", "contactText": "1111111" },

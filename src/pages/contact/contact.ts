@@ -37,7 +37,25 @@ export class ContactPage {
       data => console.log(data),
       error => console.error(error)
       );
+    console.log("third page init!!")
   }
+
+  ionViewWillEnter() {
+    this.refreshPage();
+  }
+  refreshPage() {
+    this.nativeStorage.getItem('userInfo')
+      .then(
+      data => {
+        this.islogin = true;
+        this.username = data.username;
+      },
+      error => {
+        this.islogin = false;
+      }
+      );
+  }
+
 
 
   presentToast() {
@@ -86,8 +104,9 @@ export class ContactPage {
   }
 
   GoSignin() {
-    let contactModal = this.modalCtrl.create(signin);
-    contactModal.present();
+    // let contactModal = this.modalCtrl.create(signin);
+    // contactModal.present();
+    this.navCtrl.push(signin);
   }
 
   private options: ImagePickerOptions = {};
@@ -102,12 +121,13 @@ export class ContactPage {
   }
 
   signout() {
-    if (this.islogin) {
-      this.islogin = false;
-    } else {
-      this.islogin = true;
-    }
-    console.log(this.islogin);
+    this.nativeStorage.remove("userInfo").then(
+      () => {
+        console.log('remove item!')
+        this.islogin = false;
+      },
+      error => console.error('Error remove item', error)
+    )
   }
 
   GoFav() {
@@ -127,10 +147,10 @@ export class ContactPage {
       );
 
 
-    this.nativeStorage.getItem('myitem')
+    this.nativeStorage.getItem('myitemasdasdasd')
       .then(
       data => console.log(data),
-      error => console.error(error)
+      error => { console.error("cannot find!!" + error) }
       );
     //this.navCtrl.push(resume);
   }
