@@ -6,8 +6,11 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-  <ion-list>
+  <ion-list *ngIf = false>
     <ion-item>
       <ion-select [(ngModel)]="employee" placeholder="省">
         <ion-option *ngFor="let item of Moments">{{item.MomentsID}}</ion-option>
@@ -19,15 +22,15 @@
 
   <ion-item ion-item *ngFor="let item of Moments">
     <ion-card>
-        <ion-avatar id="ImaAva">
-          <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" />
-        </ion-avatar>
-        <h2 id="username">Marty McFly</h2>
-      <img src="../image/avatar/avatar{{item.MomentsID}}.jpg" (click)="GOshowInfo($event,item)">
+      <ion-avatar id="ImaAva">
+        <img src="{{item.imgs[0].path}}" cache=true/>
+      </ion-avatar>
+      <h2 id="username">{{item.author}}</h2>
+      <img src={{item.imgs[0].path}} cache=true (click)="GOshowInfo($event,item)">
 
 
       <ion-card-content (click)="GOshowInfo($event,item)">
-        <p>{{item.content}}</p>
+        <p>{{item.title}}</p>
       </ion-card-content>
 
       <ion-row>

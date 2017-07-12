@@ -29,13 +29,13 @@
   </ion-card>
 
   <ion-list>
-    <button ion-item (click)="GoFav(item)">
+    <button ion-item (click)="GoFav(item)" *ngIf="islogin">
     我的收藏
   </button>
-    <button ion-item (click)="GoSignin(item)">
+    <button ion-item (click)="GoSignin(item)" *ngIf="islogin">
     我的提问
   </button>
-    <button ion-item (click)="GoSignin(item)">
+    <button ion-item (click)="GoSignin(item)" *ngIf="islogin">
     历史记录
   </button>
     <button ion-item (click)="GoSignin(item)">
