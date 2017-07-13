@@ -16,8 +16,7 @@ export class showInfo {
     private index = 0;
     constructor(public navCtrl: NavController, public params: NavParams) {
         this.item = params.data.item;
-        this.imgPaths = ["../image/avatar/avatar1.jpg",
-            "../image/avatar/avatar2.jpg", "../image/avatar/avatar3.jpg"];
+        this.imgPaths = params.data.item.imgs;
     }
     slideChanged() {
         let currentIndex = this.slides.getActiveIndex();

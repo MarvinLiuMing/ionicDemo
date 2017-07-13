@@ -84,25 +84,6 @@ export class ContactPage {
     }, 2000);
   }
 
-  logEvent() {
-    this.http.get('http://192.168.1.4:3000/test').subscribe(Response => {
-      console.log(Response)
-      console.log(Response.text())
-      console.log(Response.json())
-      var data = Response.json()
-      console.log(data.data)
-    }, error => {
-      alert("Error！！" + error);
-    });
-    // if(this.username=="Marvin"){
-    //   this.presentLoadingDefault();
-    // }else{
-    //   this.presentToast();
-    // }
-
-    // console.log('event!' + this.username)
-  }
-
   GoSignin() {
     // let contactModal = this.modalCtrl.create(signin);
     // contactModal.present();

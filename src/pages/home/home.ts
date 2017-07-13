@@ -14,11 +14,11 @@ import { signin } from '../contact/signin';
   providers: [NativeStorage, MyHttp]
 })
 export class HomePage {
-  private Moments = [{ imgs: [{ path: "http://res.cloudinary.com/marvin/image/upload/v1496563820/sample_image1.png" }] }];
+  private Moments = [{ imgs: [] }];
 
   constructor(public navCtrl: NavController, public myHttp: MyHttp,
     public nativeStorage: NativeStorage) {
-    this.Moments[0].imgs[0].path = "";
+    this.Moments[0].imgs[0] = "";
     console.log(new Date().getTime())
   }
 

@@ -20,6 +20,7 @@ export class addNewInfo {
     private content: string;
     private userInfo;
     private public_id: string;
+    private imgsArry = new Array();
 
     constructor(public navCtrl: NavController, public imgPicker: ImagePicker, public myHttp: MyHttp,
         public toastCtrl: ToastController, public nativeStorage: NativeStorage, public file: File, public params: NavParams) {
@@ -43,6 +44,7 @@ export class addNewInfo {
             var imageURLs: string;
             var imagePath: string;
             var imageName: string;
+            var __this = this;
             for (var i = 0; i < results.length; i++) {
                 console.log('Image URI: ' + results[i]);
                 this.imgPath = results[i]
@@ -62,7 +64,7 @@ export class addNewInfo {
                     }
 
                     this.myHttp.postImg('https://api.cloudinary.com/v1_1/marvin/image/upload', Rbody, function (data) {
-                        this.presentToast(data)
+                        __this.imgsArry.push(data.url);
                     })
 
 
@@ -72,6 +74,22 @@ export class addNewInfo {
             }
 
         }, (err) => { });
+
+        // this.public_id = this.userInfo.username + new Date().getTime();
+        // var Rbody = {
+        //     file: ,
+        //     api_key: '143991296593611',
+        //     public_id: this.public_id,
+        //     timestamp: new Date().getTime(),
+        //     signature: this.getSignature()
+        // }
+        // var ROption = {
+        // }
+        // var __this = this;
+        // this.myHttp.postImg('https://api.cloudinary.com/v1_1/marvin/image/upload', Rbody, function (data) {
+        //     __this.imgsArry.push(data.url);
+        //     console.log(__this.imgsArry)
+        // })
     }
 
 
@@ -89,6 +107,11 @@ export class addNewInfo {
 
     submitNewInfo() {
         var __this = this;
+        var imgs = new Array();
+        for (var i = 0; i < this.imgsArry.length; i++) {
+            imgs.push(this.imgsArry)
+        }
+        console.log("imgs : " + imgs)
         this.nativeStorage.getItem('userInfo')
             .then(
             data => {
@@ -96,7 +119,7 @@ export class addNewInfo {
                     title: this.title,
                     author: data.username,
                     content: this.content,
-                    imgs: [{ path: "http://res.cloudinary.com/marvin/image/upload/v1499744870/1934369354_tkhbfx.jpg" }]
+                    imgs: this.imgsArry
                 });
 
                 this.myHttp.post('AddArticles', body, function (data) {

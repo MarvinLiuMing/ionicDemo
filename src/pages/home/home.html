@@ -23,10 +23,10 @@
   <ion-item ion-item *ngFor="let item of Moments">
     <ion-card>
       <ion-avatar id="ImaAva">
-        <img src="{{item.imgs[0].path}}" cache=true/>
+        <img src="{{item.imgs[0]}}" cache=true/>
       </ion-avatar>
       <h2 id="username">{{item.author}}</h2>
-      <img src={{item.imgs[0].path}} cache=true (click)="GOshowInfo($event,item)">
+      <img src={{item.imgs[0]}} cache=true (click)="GOshowInfo($event,item)">
 
 
       <ion-card-content (click)="GOshowInfo($event,item)">

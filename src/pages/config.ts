@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 
 import { Http, Headers, RequestOptionsArgs } from '@angular/http';
 
-const ConfigURL = "http://localhost:3000/";
-
+//const ConfigURL = "http://localhost:3001/";
+const ConfigURL = "http://marvinliu.mobi/";
 @Component({
     providers: []
 })
@@ -58,3 +58,6 @@ export class MyHttp {
     }
 
 }
+
+
+export const base64code = ""

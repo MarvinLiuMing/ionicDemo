@@ -18,6 +18,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HttpModule } from '@angular/http';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { File } from '@ionic-native/file';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { HttpModule } from '@angular/http';
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    ImagePicker,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
