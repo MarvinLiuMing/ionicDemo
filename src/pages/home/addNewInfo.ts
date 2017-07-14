@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ToastController, NavParams } from 'ionic-angular';
+import { NavController, ToastController, NavParams, AlertController } from 'ionic-angular';
 import { ImagePicker, ImagePickerOptions } from '@ionic-native/image-picker';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { File } from '@ionic-native/file';
@@ -23,7 +23,7 @@ export class addNewInfo {
     private imgsArry = new Array();
 
     constructor(public navCtrl: NavController, public imgPicker: ImagePicker, public myHttp: MyHttp,
-        public toastCtrl: ToastController, public nativeStorage: NativeStorage, public file: File, public params: NavParams) {
+        public toastCtrl: ToastController, public nativeStorage: NativeStorage, public file: File, public params: NavParams, public alertCtrl: AlertController) {
         this.imgPath = "";
         this.userInfo = params.data.userInfo;
 
@@ -51,6 +51,7 @@ export class addNewInfo {
                 imageURLs = results[i];
                 imagePath = imageURLs.substr(0, imageURLs.lastIndexOf('/') + 1);
                 imageName = imageURLs.substr(imageURLs.lastIndexOf('/') + 1);
+
                 this.file.readAsDataURL(imagePath, imageName).then((b64str) => {
                     this.public_id = this.userInfo.username + new Date().getTime();
                     var Rbody = {
@@ -64,12 +65,14 @@ export class addNewInfo {
                     }
 
                     this.myHttp.postImg('https://api.cloudinary.com/v1_1/marvin/image/upload', Rbody, function (data) {
+                 
                         __this.imgsArry.push(data.url);
                     })
 
 
                 }).catch(err => {
-                    this.presentToast('readAsDataURL failed: (' + err.code + ")" + err.message);
+            
+                    //this.presentToast('readAsDataURL failed: (' + err + ")");
                 })
             }
 
@@ -107,11 +110,6 @@ export class addNewInfo {
 
     submitNewInfo() {
         var __this = this;
-        var imgs = new Array();
-        for (var i = 0; i < this.imgsArry.length; i++) {
-            imgs.push(this.imgsArry)
-        }
-        console.log("imgs : " + imgs)
         this.nativeStorage.getItem('userInfo')
             .then(
             data => {
@@ -119,7 +117,7 @@ export class addNewInfo {
                     title: this.title,
                     author: data.username,
                     content: this.content,
-                    imgs: this.imgsArry
+                    imgs: __this.imgsArry
                 });
 
                 this.myHttp.post('AddArticles', body, function (data) {

@@ -33,6 +33,12 @@
         },
         "cordova-plugin-nativestorage": {
             "PACKAGE_NAME": "com.ionicframework.ionicdemo954533"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.ionicdemo954533"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.ionicdemo954533"
         }
     },
     "dependent_plugins": {
